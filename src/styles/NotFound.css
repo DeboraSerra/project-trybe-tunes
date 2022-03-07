@@ -1,0 +1,17 @@
+.page-not-found {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.notFound {
+  height: 50vh;
+  margin: 15px auto;
+  object-fit: contain;
+  width: 50vw;
+}
+
+.not-found-p {
+  font-size: 2rem;
+  font-weight: 700;
+}
