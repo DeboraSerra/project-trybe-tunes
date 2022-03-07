@@ -71,7 +71,7 @@ class Login extends React.Component {
             </form>
           </div>
         )}
-        {isSaved && <Redirect to="/search" />}
+        {isSaved && <Redirect to="/project-trybe-tunes/search" />}
       </>
     );
   }
