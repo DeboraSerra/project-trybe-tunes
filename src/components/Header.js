@@ -38,21 +38,21 @@ class Header extends React.Component {
               <Link
                 className="link"
                 data-testid="link-to-search"
-                to="/search"
+                to="/project-trybe-tunes/search"
               >
                 Search
               </Link>
               <Link
                 className="link"
                 data-testid="link-to-favorites"
-                to="/favorites"
+                to="/project-trybe-tunes/favorites"
               >
                 Favorites
               </Link>
               <Link
                 className="link"
                 data-testid="link-to-profile"
-                to="/profile"
+                to="/project-trybe-tunes/profile"
               >
                 Profile
               </Link>

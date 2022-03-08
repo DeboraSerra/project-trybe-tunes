@@ -81,7 +81,7 @@ class Search extends React.Component {
                 <li key={ album.collectionId } className="music-card">
                   <Link
                     className="link-music"
-                    to={ `/album/${album.collectionId}` }
+                    to={ `/project-trybe-tunes/album/${album.collectionId}` }
                     data-testid={ `link-to-album-${album.collectionId}` }
                   >
                     <img

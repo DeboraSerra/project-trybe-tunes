@@ -48,7 +48,12 @@ class Profile extends React.Component {
                   alt={ user.name }
                 />
               </section>
-              <Link className="link-edit" to="/profile/edit">Editar perfil</Link>
+              <Link
+                className="link-edit"
+                to="/project-trybe-tunes/profile/edit"
+              >
+                Editar perfil
+              </Link>
             </section>
             <section className="flex-container-h flex-profile">
               <h3 className="profile-title">Nome: </h3>

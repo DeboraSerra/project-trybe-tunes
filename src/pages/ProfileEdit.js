@@ -123,7 +123,7 @@ class ProfileEdit extends React.Component {
             </button>
           </form>
         )}
-        {saved && <Redirect to="/profile" />}
+        {saved && <Redirect to="/project-trybe-tunes/profile" />}
       </div>
     );
   }
