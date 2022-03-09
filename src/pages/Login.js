@@ -17,8 +17,12 @@ class Login extends React.Component {
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     this.setState({ mounted: true });
+    const user = await userAPI.getUser();
+    if (user) {
+      this.setState({ clicked: true, saved: true });
+    }
   }
 
   componentWillUnmount() {
