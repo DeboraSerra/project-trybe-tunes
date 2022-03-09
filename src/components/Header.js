@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import Loading from './Loading';
 import '../styles/Header.css';
 
@@ -10,6 +10,7 @@ class Header extends React.Component {
     super();
     this.state = {
       user: '',
+      loading: true,
     };
   }
 
@@ -18,14 +19,16 @@ class Header extends React.Component {
   }
 
   getUser = async () => {
-    this.setState({ user: await userAPI.getUser() });
+    this.setState({ user: await userAPI.getUser(), loading: false });
   }
 
   render() {
-    const { user } = this.state;
+    const { user, loading } = this.state;
+    const hasUser = !loading && Object.values(user).length === 0;
     return (
       <header className="header" data-testid="header-component">
-        {!user ? <Loading /> : (
+        {hasUser && <Redirect to="/project-trybe-tunes/" />}
+        {loading ? <Loading /> : (
           <>
             <section className="flex-container-h">
               <img className="logo" src="https://www.pngitem.com/pimgs/m/116-1163025_music-icon-png-free-download-desenho-de-notas.png" alt="Music symbol" />
