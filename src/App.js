@@ -13,16 +13,21 @@ class App extends React.Component {
     return (
       <section>
         <BrowserRouter>
-          <Switch>
-            <Route path="/project-trybe-tunes/profile/edit" component={ ProfileEdit } />
-            <Route path="/project-trybe-tunes/profile" component={ Profile } />
-            <Route path="/project-trybe-tunes/favorites" component={ Favorites } />
-            <Route path="/project-trybe-tunes/album/:id" component={ Album } />
-            <Route path="/project-trybe-tunes/search" component={ Search } />
-            <Route exact path="/project-trybe-tunes/" component={ Login } />
-            <Route path="/project-trybe-tunes/*" component={ NotFound } />
-          </Switch>
+          <section className="main-page">
+            <Switch>
+              <Route path="/project-trybe-tunes/profile/edit" component={ ProfileEdit } />
+              <Route path="/project-trybe-tunes/profile" component={ Profile } />
+              <Route path="/project-trybe-tunes/favorites" component={ Favorites } />
+              <Route path="/project-trybe-tunes/album/:id" component={ Album } />
+              <Route path="/project-trybe-tunes/search" component={ Search } />
+              <Route exact path="/project-trybe-tunes/" component={ Login } />
+              <Route path="/project-trybe-tunes/*" component={ NotFound } />
+            </Switch>
+          </section>
         </BrowserRouter>
+        <footer className="footer">
+          See the codebase in <a href="https://github.com/DeboraSerra/project-trybe-tunes/tree/master">GitHub</a>
+        </footer>
       </section>
     );
   }

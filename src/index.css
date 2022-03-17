@@ -17,3 +17,12 @@ code {
   display: flex;
   justify-content: center;
 }
+
+.main-page {
+  min-height: 95vh;
+}
+
+.footer {
+  width: 100%;
+  font-size: 1.5rem;
+}
